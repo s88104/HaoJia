@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#dcdcdc" >
+
+    <!-- 關鍵字搜尋 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+<!-- 
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+ -->        
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:background="#465a65">
+
+            <TextView
+                android:id="@+id/search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="請輸入關鍵字"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/fontsize22dp" />
+
+			<!-- 設置單行輸入android:singleLine="true"-->
+            <EditText
+                android:id="@+id/search_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="30"
+                android:singleLine="true"
+                android:hint="請輸入餐廳名稱，例：王品"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColor = "@color/light_gray" 
+                android:textSize="@dimen/fontsize20dp"/>
+        </LinearLayout>
+    	
+    	<!-- 類別搜尋 -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"            
+            android:columnCount="2"
+            android:rowCount="13" >
+
+            <TextView
+                android:id="@+id/type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+				android:layout_marginLeft="10dp" 
+                android:layout_row="0"
+                android:text="類別篩選"
+                android:textSize="@dimen/fontsize22dp" />
+
+            <TextView
+                android:id="@+id/group_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp" 
+                android:layout_row="1"
+                android:text="類別"
+                android:textSize="@dimen/fontsize20dp" />
+
+            <Spinner
+                android:id="@+id/group_spinner"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_row="2" />
+
+            <TextView
+                android:id="@+id/class_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="left|center_vertical"
+                android:layout_row="1"
+                android:text="種類"
+                android:textSize="@dimen/fontsize20dp" />
+
+            <Spinner
+                android:id="@+id/class_spinner"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="left|center_vertical"
+                android:layout_row="2" />
+            
+			<!-- 地點搜尋 -->
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp" 
+                android:layout_row="3"
+                android:text="地點篩選"
+                android:textSize="@dimen/fontsize22dp" />
+
+            <TextView
+                android:id="@+id/county_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp" 
+                android:layout_row="4"
+                android:text="縣市"
+                android:textSize="@dimen/fontsize20dp" />
+
+            <Spinner
+                android:id="@+id/county_spinner"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp" 
+                android:layout_row="5" />
+
+            <TextView
+                android:id="@+id/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="left|center_vertical"
+                android:layout_row="4"
+                android:text="區域"
+                android:textSize="@dimen/fontsize20dp" />
+
+            <Spinner
+                android:id="@+id/area_spinner"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="left|center_vertical"
+                android:layout_row="5" />
+        </GridLayout>
+    </LinearLayout>
+    
+	<!-- 搜尋button -->
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="搜尋" />
+
+</RelativeLayout>

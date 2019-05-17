@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#dcdcdc" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+      
+		<!-- GridLayout裡的順序不能改 改了就錯超級怪 -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#465a65"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="3" >
+            
+            <ImageButton
+                android:id="@+id/map_btn"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_column="1"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_row="0"
+                android:layout_rowSpan="3"
+                android:background="#00000000"
+                android:src="@drawable/map" />    
+                        
+            <TextView
+                android:id="@+id/User_Latitude_Longitude"
+                android:layout_width="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+				android:layout_marginLeft="10dp" 
+				android:layout_marginBottom="10dp"  				                               
+                android:layout_row="2"
+                android:text="X,Y"
+                android:textSize="@dimen/fontsize18dp"
+                android:textColor="@color/light_gray" />
+            
+            <TextView
+                android:id="@+id/range_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_row="1"
+                android:text="距離範圍"
+                android:textSize="@dimen/fontsize20dp"
+                android:textColor="@color/light_gray" />
+          
+            <TextView
+                android:id="@+id/near_list_title"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_row="0"
+                android:text="清單瀏覽"
+                android:textSize="@dimen/fontsize22dp"
+                android:textColor="@color/light_gray" />
+        </GridLayout>
+
+        <ListView
+            android:id="@+id/near_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00000000">
+
+        </ListView>
+    </LinearLayout>
+
+   
+
+</RelativeLayout>

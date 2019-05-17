@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.haojia"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+             
+    <!-- 允許應用程式可以存取Google Maps伺服器 -->
+    <permission
+        android:name="com.example.haojia.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission 
+        android:name="com.example.haojia.permission.MAPS_RECEIVE" />
+    
+       
+    <!-- INTERNET網路權限  VIBRATE震動權限-->
+    <uses-permission 
+    android:name="android.permission.INTERNET" />
+    <uses-permission 
+    android:name="android.permission.VIBRATE" />
+    
+
+    
+    <!-- 定位權限 -->
+    <!-- 允許透過GPS網路來定位 -->
+    <uses-permission 
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 允許透過wi-fi或行動網路來定位 -->
+    <uses-permission 
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 允許應用訪問網路上的信息 -->
+    <uses-permission 
+        android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 允許應用程式將地圖資訊暫存到Android裝置的外部儲存體 -->
+	<uses-permission 
+	    android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<!-- 允許應用程式存取Google所提供web型式的服務 -->
+	<uses-permission 
+	    android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <!-- 因為Maps API第2版要使用到OpenGL ES第2版功能，所以必須增加下列設定，以確保使用者的裝置支援 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+	
+	
+    
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- android:value屬性要輸入申請的API金鑰 -->		
+		<meta-data
+		    android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDOpPiDgKQJJzVXh6gL8Wi45oshLkqXbsQ"/>
+        <meta-data 
+            android:name="com.google.android.gms.version" 
+            android:value="@integer/google_play_services_version" />     
+              
+        
+        <!-- 起始頁 creenOrientation:始終為直向 theme:設定成無標題Bar -->
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<!-- 主介面 -->
+		<activity 
+		    android:name=".MainActivity">
+		</activity>
+		
+		<!-- 附近 清單 -->
+		<activity 
+		    android:name=".NearActivity">
+		</activity>
+		
+		<!-- 附近 地圖 -->
+		<activity 
+		    android:name=".NearMap">
+		</activity>
+		
+		<!-- 餐廳詳細資訊 -->
+		<activity
+		    android:name=".RestaurantInfo">
+		</activity>
+		
+		<!-- 籤筒 -->
+		<activity 
+		    android:name=".RandomActivity">
+		</activity>
+		
+		<!-- 餐廳搜尋 -->
+		<activity 
+		    android:name=".SearchActivity">
+		</activity>
+		
+		<!-- 搜尋結果 清單呈現 -->
+		<activity 
+		    android:name=".SearchList">
+		</activity>
+		
+		<!-- 熱門餐廳 -->
+		<activity 
+		    android:name=".HotActivity">
+		</activity>
+		
+		<!-- 我的最愛 -->
+		<activity 
+		    android:name=".FavoriteActivity">
+		</activity>
+		
+		<!-- 上傳 -->
+		<activity 
+		    android:name=".InsertActivity">
+		</activity>
+		
+		<!-- 聯絡 -->
+		<activity 
+		    android:name=".EmailActivity">
+		</activity>
+		
+		<!-- 關於 -->
+		<activity 
+		    android:name=".InfoActivity">
+		</activity>
+                          
+    </application>
+</manifest>

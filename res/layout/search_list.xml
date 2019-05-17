@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#dcdcdc" >
+	
+	<!-- 顯示使用者搜尋的關鍵字 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+<!-- 
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#465a65" >
+            
+			<!-- 關鍵字 -->
+            <TextView
+                android:id="@+id/search_keyword_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="您搜尋了 &apos;KeyWord&apos;"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/fontsize22dp"/>
+            
+			<!-- 顯示類別條件 -->
+            <TextView
+                android:id="@+id/type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="類別: 中式 - 飯食"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/fontsize20dp" />
+
+			<!-- 顯示地點條件 -->
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"                
+                android:text="地點: 新北市 - 全區"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/fontsize20dp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/search_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00000000" >
+        </ListView>
+    </LinearLayout>
+	
+	
+
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/random_bg"
+    android:orientation="vertical" >
+
+   <RelativeLayout
+        android:id="@+id/imgdown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" >
+		
+        <!-- 搖晃手機提示圖 -->
+        <ImageView
+            android:id="@+id/random_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/random_head" />
+		
+		<!-- 籤筒圖示 -->
+        <ImageView
+            android:id="@+id/random_img"
+            android:layout_width="320dp"
+            android:layout_height="400dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/random_head"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/random_img"
+            android:scaleType="fitXY" />
+	
+        <ImageView
+            android:id="@+id/random_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/random_img"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/random_bottom" />
+		
+		<!-- 不喜歡嗎 在搖一次 -->
+		<ImageView
+            android:id="@+id/random_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/random_head"
+            android:layout_alignTop="@+id/random_head"
+            android:src="@drawable/random_note"
+            android:visibility="invisible" />
+		
+		<!-- 抽籤結果圖 -->
+        <ImageButton
+            android:id="@+id/result_btn"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_above="@+id/random_bottom"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/random_result"
+            android:visibility="invisible"
+            android:background="#00000000"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/result_btn"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical" >
+             
+        	<TextView
+        	    android:id="@+id/r_name"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_gravity="center_horizontal"
+        	    android:text=""
+        	    android:textSize="@dimen/fontsize26dp"
+        	    android:textStyle="bold" />
+        	
+        	<TextView
+        	    android:id="@+id/r_address"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_gravity="left"
+        	    android:layout_marginTop="30dp"
+        	    android:layout_marginLeft="50dp"
+        	    android:text=""
+        	    android:textSize="@dimen/fontsize22dp"
+        	    android:textStyle="bold" />
+			
+        	<TextView
+            	android:id="@+id/r_distance"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+        	    android:layout_gravity="center_horizontal"            	
+            	android:layout_marginTop="30dp"
+            	android:text=""
+            	android:textSize="@dimen/fontsize22dp"
+            	android:textStyle="bold"/>
+        </LinearLayout>
+
+
+    
+        
+
+
+
+        <TextView
+            android:id="@+id/random_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/random_bottom"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:textSize="@dimen/fontsize20dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
